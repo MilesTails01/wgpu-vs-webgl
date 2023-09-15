@@ -456,18 +456,18 @@ void main()
 	} 
 	else 
 	{
-		vec3 color = result.xyz;
-		vec3 hit = ray.org + ray.dir * dist;
-		vec3 normal = getNormal(hit); // Make sure you have a function called 'getNormal' defined in your GLSL
-		float fog = clamp(0.0, 1.0, pow(dist / 10.0, 2.0));
-		float shadow = clamp(0.0, 1.0, softShadow(hit, normalize(SUN - hit), 0.1, 4.0) + 0.25); // Make sure 'softShadow' is defined in your GLSL
-		float pShadow = pointLightSoftShadow(hit, lPos1, 16.0); // Make sure 'pointLightSoftShadow' is defined in your GLSL
+		vec3 color		= result.xyz;
+		vec3 hit 		= ray.org + ray.dir * dist;
+		vec3 normal 	= getNormal(hit); 
+		float fog 		= clamp(0.0, 1.0, pow(dist / 10.0, 2.0));
+		float shadow 	= clamp(0.0, 1.0, softShadow(hit, normalize(SUN - hit), 0.1, 4.0) + 0.25); 
+		float pShadow 	= pointLightSoftShadow(hit, lPos1, 16.0); 
 
-		color = mix(color, paletteSand(0.08), pow(dot(normal, vec3(0.0, 1.0, 0.0)), 5.0)); // Replace 'paletteSand' if not defined in GLSL
-		color += pointLight(lPos1, hit, normal, 150.0 + 50.0 * abs(sin(time * 5.0))) * pShadow * vec3(1.0, 0.5, 0.0); // Make sure 'pointLight' is defined in your GLSL
-		color = mix(color * 0.4 * paletteSand(0.09), color, shadow); // Replace 'paletteSand' if not defined in GLSL
+		color 			= mix(color, paletteSand(0.08), pow(dot(normal, vec3(0.0, 1.0, 0.0)), 5.0)); 
+		color 			+= pointLight(lPos1, hit, normal, 150.0 + 50.0 * abs(sin(time * 5.0))) * pShadow * vec3(1.0, 0.5, 0.0); 
+		color 			= mix(color * 0.4 * paletteSand(0.09), color, shadow); 
 
-		FragColor = vec4(mix(color * (clamp(dot(vec3(4.0, 8.0, 6.0), normal) / 15.0, 0.0, 1.0) + AMBIENT), HAZE, fog), 1.0);
+		FragColor 		= vec4(mix(color * (clamp(dot(vec3(4.0, 8.0, 6.0), normal) / 15.0, 0.0, 1.0) + AMBIENT), HAZE, fog), 1.0);
 
 
 	//	FragColor = vec4(AMBIENT, AMBIENT ,AMBIENT,1.0);
