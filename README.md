@@ -9,7 +9,7 @@ This repository is dedicated to exploring the capabilities of WebGPU, the next-g
 
 **Download the Project**
 ```
-git clone https://github.com/MilesTails01/webgpu-vs-webgl.git
+git clone https://github.com/MilesTails01/wgpu-vs-webgl
 git pull
 ```
 
