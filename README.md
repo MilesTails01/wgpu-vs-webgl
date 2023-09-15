@@ -43,6 +43,11 @@ npm run build
 npm run dev
 ```
 
+## Links
+https://betterprogramming.pub/webgpu-and-why-its-exciting-6addb29354a4
+https://gpuweb.github.io/gpuweb/wgsl/
+https://webgpufundamentals.org/
+
 
 # Commits
 
