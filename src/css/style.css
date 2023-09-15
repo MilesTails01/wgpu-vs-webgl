@@ -1,0 +1,76 @@
+* {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 38px;
+	color: white;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #444;
+}
+
+#app {
+	/* position: absolute; */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+	height: 100vh;
+	width: 100vw;
+}
+
+canvas {
+	background-color: antiquewhite;
+	width: 800px;
+	height: 800px;
+	border: solid 2px black;
+	box-shadow: 0 0 5px rgba(0,0,0,0.75);
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.statsA {
+	position: absolute !important;
+	left: unset !important;
+	right: 0 !important;
+	margin: 10px;
+	display: none;
+}
+
+.canvas_parent {
+	position: relative;
+}
+
+.btn {
+	border: solid 4px #777;
+	color: #777;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70px;
+	min-width: 70px;
+	height: 70px;
+	min-height: 70px;
+	aspect-ratio: 1;
+	text-align: center;
+	cursor: pointer;
+	filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.25));
+}

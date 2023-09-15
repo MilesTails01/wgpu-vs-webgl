@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WGPU vs WebGL</title>
+  </head>
+  <body>
+    <div id="app" onc>
+		<div class="flex-col"><div class="flex-row">WebGPU <div class="fpsc" id="wgpu_fps"></div></div>
+		<div class="canvas_parent">
+			<canvas id="webgpu-canvas"></canvas>
+			<canvas id="webgpu-canvasT" style="display: none;"></canvas>
+		</div></div>
+
+		<div class="btn" onclick="flip();">vs</div>
+
+		<div class="flex-col"><div class="flex-row">WebGL2 <div class="fpsc" id="wgl2_fps"></div></div>
+		<div class="canvas_parent">
+			<canvas id="webgl-canvas"></canvas>
+			<canvas id="webgl-canvasT" style="display: none;"></canvas>
+		</div></div>
+	</div>
+    <script type="module" src="src/main.js"></script>
+	<script>
+		function flip()
+		{
+			window.step++; 
+			window.step = (window.step % 2);
+
+			document.getElementById('webgl-canvas')		.style.display = 'none';
+			document.getElementById('webgpu-canvas')	.style.display = 'none';
+			document.getElementById('webgl-canvasT')	.style.display = 'none';
+			document.getElementById('webgpu-canvasT')	.style.display = 'none';
+
+			document.getElementsByClassName("fpsc")[0]		.style.display = "none";
+			document.getElementsByClassName("fpsc")[1]		.style.display = "none";
+			document.getElementsByClassName("statsA")[0]	.style.display = "none";
+			document.getElementsByClassName("statsA")[1]	.style.display = "none";
+
+			if(window.step == 0)	document.getElementById('webgl-canvas')		.style.display = 'block';
+			if(window.step == 0)	document.getElementById('webgpu-canvas')	.style.display = 'block';
+			if(window.step == 1)	document.getElementById('webgl-canvasT')	.style.display = 'block';
+			if(window.step == 1)	document.getElementById('webgpu-canvasT')	.style.display = 'block';
+
+			if(window.step == 0)	document.getElementsByClassName("fpsc")[0]	.style.display = "block";
+			if(window.step == 0)	document.getElementsByClassName("fpsc")[1]	.style.display = "block";
+			if(window.step == 1)	document.getElementsByClassName("statsA")[0].style.display = "block";
+			if(window.step == 1)	document.getElementsByClassName("statsA")[1].style.display = "block";
+			
+		}
+
+	</script>
+  </body>
+</html>
