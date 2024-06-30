@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { WebGPURenderer } from 'three/examples/jsm/renderers/webgpu/WebGPURenderer';
+import WebGPURenderer from 'three/examples/jsm/renderers/webgpu/WebGPURenderer.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls';
 import { ImprovedNoise } from 'three/examples/jsm/math/ImprovedNoise.js';
 import { SimplexNoise } from 'three/examples/jsm/math/SimplexNoise';
