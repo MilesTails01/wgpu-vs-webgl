@@ -1,6 +1,12 @@
 # WebGL vs WebGPU
 
-![image](https://github.com/MilesTails01/wgpu-vs-webgl/assets/83541965/428fd08b-73fe-4629-ba0e-d48d42a8edfa)
+https://api.fenixfox-studios.com/assets/bae4a9d1-42c8-4da5-ba94-bf03f16be295
+
+## LiveDemo
+https://apps.fenixfox-studios.com/webgpu_vs_webgl/
+
+## Article
+https://fenixfox-studios.com/content/webgpu_vs_webgl/
 
 This repository is dedicated to exploring the capabilities of WebGPU, the next-gen graphics API that promises to revolutionize web-based 3D and 2D graphics. WebGPU is heavily inspired by modern graphics APIs like Vulkan, Metal, and Direct3D12, offering reduced overhead and impressive performance. benchmarks have been designed to probe the boundaries of what WebGPU can currently achieve, focusing on two key aspects: Scene rendering via Fragment Shaders (SDF Fragment Shader) and Vertex Shaders. While WebGPU has shown immense promise, it's worth noting that it's still under development. the tests revealed some issues with shadow mapping and overall performance when compared to the established WebGL standard, especially when using high polygon scenes with Three.js. it's an exciting area to watch for anyone interested in web graphics technology.
 
