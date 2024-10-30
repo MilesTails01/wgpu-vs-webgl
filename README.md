@@ -1,6 +1,6 @@
 # WebGL vs WebGPU
 
-https://api.fenixfox-studios.com/assets/bae4a9d1-42c8-4da5-ba94-bf03f16be295
+https://github.com/user-attachments/assets/b1f7317e-07b9-4665-a0ee-9b4d95489de1
 
 ## LiveDemo
 https://apps.fenixfox-studios.com/webgpu_vs_webgl/
